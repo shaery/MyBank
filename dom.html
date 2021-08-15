@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #second-p {
+            background-color: rgba(210, 105, 30, 0.068);
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my blog website</h1>
+        <ul id="blog-list">
+            <li>Blog-1</li>
+            <li>Blog-2</li>
+            <li>Blog-3</li>
+            <li>Blog-4</li>
+        </ul>
+    </header>
+
+    <main>
+        <article class="blog">
+            <h3>My Awesome Blog-1</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam mollitia impedit voluptates ab quia
+                at, obcaecati doloribus porro, rem deserunt, unde quam. Doloremque, labore consequuntur. Praesentium
+                iure inventore ipsa voluptas.</p>
+        </article>
+        <article class="blog">
+            <h3>My Awesome Blog-2</h3>
+            <p id="second-p">Quia commodi, ratione consequuntur nobis eius ex exercitationem eveniet? Sit, eos. Ad
+                cupiditate, maiores
+                odit sunt pariatur deserunt consequuntur impedit asperiores! Ducimus illo distinctio optio possimus iste
+                porro adipisci nam.</p>
+        </article>
+        <article class="blog">
+            <h3>My Awesome Blog-3</h3>
+            <p id="third-p">Nemo error suscipit quidem rem dolore deserunt vitae quia illo similique corporis,
+                doloremque, nisi
+                cupiditate. Quas tempore ipsum qui eius, dignissimos provident excepturi autem minima ratione cupiditate
+                voluptatibus, possimus ipsam!</p>
+        </article>
+    </main>
+
+    <script>
+        // console.log(document.body);
+
+        const students = { name: 'Prity', age: 22, height: 62 }
+
+        const blogTitles = document.getElementsByTagName('h3');
+        for (const h3 of blogTitles) {
+            // console.log(h3.innerText);
+        }
+
+        const blogDetails = document.getElementsByTagName('p');
+        for (const p of blogDetails) {
+            // console.log(p.innerText);
+        }
+
+        const secondTitle = document.getElementById('second-p');
+        secondTitle.style.textAlign = 'center';
+        const third = document.getElementById('third-p');
+        third.innerText = 'Title updated by Js';
+        third.style.backgroundColor = 'salmon';
+        third.style.padding = '10px';
+        third.style.marginLeft = '20px';
+
+
+        //explore getElementsByClassName
+        const blogs = document.getElementsByClassName('blog');
+        for (const blog of blogs) {
+            blog.style.border = '2px solid red';
+            blog.style.borderRadius = '10px';
+            blog.style.padding = '10px';
+            blog.style.margin = '20px';
+        }
+
+
+        //Create and add element using js
+        const li = document.createElement('li');
+        li.innerText = 'Blog-5';
+        //where to add
+        const ul = document.getElementById('blog-list');
+        ul.appendChild(li);
+
+
+    </script>
+</body>
+
+</html>

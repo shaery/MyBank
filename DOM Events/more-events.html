@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+
+<body>
+    <h1>More Events...</h1>
+    <section>
+        <h3 id="secret-info">Very very important secret information</h3>
+
+        <input type="text" id="delete-confirm" placeholder="Please type delete">
+        <button id="delete-btn" disabled>Delete</button>
+    </section>
+    <script>
+        document.getElementById('delete-btn').addEventListener('click', function () {
+            document.getElementById('secret-info').style.display = 'none';
+        });
+
+        //Focus
+        document.getElementById('delete-confirm').addEventListener('focus', function () {
+            document.body.style.backgroundColor = 'lightcoral';
+        });
+
+        //Blur
+        document.getElementById('delete-confirm').addEventListener('blur', function () {
+            document.body.style.backgroundColor = 'lightblue';
+        });
+    </script>
+</body>
+
+</html>
